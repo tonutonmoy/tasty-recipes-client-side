@@ -1,0 +1,26 @@
+/* .home-card-container{
+
+
+} */
+
+.home-card-title{
+    
+    font-size: 25px;
+    font-weight: 500;
+}
+
+
+.home-card-text{
+    font-size: 20px;
+    
+    font-weight: 400;
+}
+
+.home-card-button{
+    width: 100%;
+    background-color: brown;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    border: 0;
+}
