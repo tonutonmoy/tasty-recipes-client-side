@@ -5,7 +5,7 @@ const ViewRecipesBanner = ({data}) => {
 
     const {name,experience,bio,img,recipes_number,like}=data;
     return (
-        <div className='row row-cols-2 container mx-auto'>
+        <div className='row row-cols-2 ViewRecipesBanner-container container mx-auto'>
 
             <div>
 

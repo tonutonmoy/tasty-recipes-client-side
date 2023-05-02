@@ -15,13 +15,16 @@ const ViewRecipes = () => {
           <ViewRecipesBanner data={singleData}></ViewRecipesBanner>
 
 
-          <section>
-            <h2>All Recipes</h2>
+          <section className='container mx-auto ' style={{marginBottom:"200px"}}>
+            <h2 className='home-title'>All Recipes</h2>
            
-             {
+           <div className=' row row-cols-2 my-5 ' >
+            
+           {
                singleData?.recipes.map((a,index)=> <RecipesCard key={index} data={a}></RecipesCard>)   
              }
 
+           </div>
 
           </section>
 

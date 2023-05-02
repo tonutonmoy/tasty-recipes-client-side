@@ -4,7 +4,15 @@
     margin: auto;
     border: 1px solid rgba(0, 0, 0, 0.377);
     border-radius: 10px;
-   
+
+    
+    box-shadow: 10px 10px 10px rgb(0, 0, 0);
+
+ 
+
+
+
+
 }
 
 .register-form-input{
@@ -68,4 +76,16 @@ color: white;
 
    background-color: #000000;
    
+}
+
+.register-button:hover{
+
+    background-color: #681919;
+
+}
+
+.register-form-container:hover{
+   
+    box-shadow: 30px 30px 30px black;
+     transition: 3s;
 }

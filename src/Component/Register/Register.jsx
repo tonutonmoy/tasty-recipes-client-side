@@ -23,7 +23,7 @@ const Register = () => {
     }
 
     return (
-        <div>
+        <div style={{marginTop:"100px",marginBottom:"200px"}}>
              <Form className='register-form-container my-5 p-5' onSubmit={registerFormHandler}>
 
              <h2 className='register-title'>Create an account</h2>  

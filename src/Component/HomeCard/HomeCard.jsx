@@ -27,7 +27,7 @@ const HomeCard = ({data}) => {
 
      
         
-              <Card className='home-card-container' style={{ width: '20rem' }}>
+              <Card className='home-card-container ' style={{ width: '20rem' }}>
       <Card.Img className='home-card-img' variant="top" src={img} />
       <Card.Body>
         <Card.Title className='home-card-title'>Name: {name} </Card.Title>

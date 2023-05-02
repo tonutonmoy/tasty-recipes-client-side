@@ -9,7 +9,7 @@
    background: linear-gradient(to right, #3f4155, #381d1e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
    
-
+   border-radius: 20px;
    
    
 }
@@ -18,7 +18,8 @@
 .home-card-img{
     height: 300px;
     padding: 20px 20px;
-    border-radius: 50%;
+    
+   border-radius: 100%;
     
    border-left: 3px solid white;
     
@@ -57,4 +58,11 @@
 .home-card-button:hover{
     background-color: #780206;
     border: none;
+}
+
+
+.home-card-container:hover{
+    border-radius: 0%;
+    box-shadow: 30px 30px 30px black;
+    transition: 3s;
 }
