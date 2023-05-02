@@ -10,6 +10,7 @@ import FoodSafety from '../FoodSafety/FoodSafety';
 import Review from '../Review/Review';
 
 
+
 const Home = () => {
 
     const chefData=useLoaderData();
@@ -22,7 +23,7 @@ const Home = () => {
 
 
         <section className='container mx-auto'>
-            <h2 className='home-title'>All Chef</h2>
+            <h2 className='home-title'>Top Indian Chef</h2>
 
             <div className='row row-cols-md-3  '>
              
@@ -52,7 +53,7 @@ const Home = () => {
               <Review></Review>
           </section>
 
-
+          
            
         </div>
     );
