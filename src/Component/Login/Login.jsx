@@ -39,7 +39,7 @@ const Login = () => {
 
 <Form.Group className="my-5" controlId="formBasicPassword">
 
-<Form.Control className='register-form-input' type="password" name='confirmPassword' placeholder="confirmPassword" required/>
+<Form.Control className='register-form-input' type="password" name='confirmPassword' placeholder="Confirm password" required/>
 </Form.Group>
 
 

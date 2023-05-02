@@ -1,0 +1,22 @@
+.food-safety-img{
+    box-shadow: 20px 20px 20px black;
+   border: 10px solid rgb(94, 49, 49);
+
+   border-radius: 50%;
+}
+
+
+.food-safety-container{
+    margin-top: 150px;
+}
+
+.food-safety-title{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.food-safety-text{
+    
+    font-size: 17px;
+
+}

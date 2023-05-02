@@ -3,27 +3,39 @@ import './HomeCard.css'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
-const HomeCard = () => {
+const HomeCard = ({data}) => {
+
+
+
+  const {id, img, name, experience, like, recipes} =data;
+
+
     return (
-        <div>
-              <Card className='home-card-container' style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
+
+      <div className='my-5'>
+
+     
+        
+              <Card className='home-card-container' style={{ width: '20rem' }}>
+      <Card.Img className='home-card-img' variant="top" src={img} />
       <Card.Body>
-        <Card.Title className='home-card-title'>Name: </Card.Title>
+        <Card.Title className='home-card-title'>Name: {name} </Card.Title>
         
         <Card.Text className='home-card-text'>
-         Recipes:
+         Recipes: {recipes}
         </Card.Text>
         <Card.Text className='home-card-text'>
-          Experience:
+          Experience: {experience}
         </Card.Text>
         <Card.Text className='home-card-text'>
-         likes:
+         likes: {like}
         </Card.Text>
         <Button className='home-card-button' variant="primary">View Recipes</Button>
       </Card.Body>
     </Card>
-        </div>
+
+    </div>
+      
     );
 };
 
