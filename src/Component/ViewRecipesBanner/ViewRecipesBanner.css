@@ -1,0 +1,26 @@
+
+.view-recipes-banner-img{
+
+   
+   width: 100%;
+   height: 100%;
+}
+.view-recipes-banner-title{
+
+    font-size: 30px;
+    
+    font-weight: 500;
+    
+
+}
+
+.view-recipes-banner-text{
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+.view-recipes-banner-span{
+    font-size: 25px;
+    font-weight: 500;
+    
+}

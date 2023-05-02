@@ -15,7 +15,7 @@ const Home = () => {
 
     const chefData=useLoaderData();
 
-    console.log(chefData)
+    
     return (
         <div className=' home-container'>
            

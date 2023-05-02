@@ -2,12 +2,23 @@ import React from 'react';
 import './HomeCard.css'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { useNavigate } from 'react-router-dom';
 
 const HomeCard = ({data}) => {
 
 
 
   const {id, img, name, experience, like, recipes} =data;
+
+  const navigate =useNavigate();
+
+  const viewRecipesButton=()=>{
+
+    
+
+    navigate(`/recipesData/${id}`)
+
+  }
 
 
     return (
@@ -28,9 +39,9 @@ const HomeCard = ({data}) => {
           Experience: {experience}
         </Card.Text>
         <Card.Text className='home-card-text'>
-         likes: {like}
+         Likes: {like}
         </Card.Text>
-        <Button className='home-card-button' variant="primary">View Recipes</Button>
+        <Button onClick={viewRecipesButton} className='home-card-button' variant="primary">View Recipes</Button>
       </Card.Body>
     </Card>
 

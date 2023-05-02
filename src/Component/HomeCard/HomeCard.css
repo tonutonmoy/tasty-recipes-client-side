@@ -53,3 +53,8 @@
     
     
 }
+
+.home-card-button:hover{
+    background-color: #780206;
+    border: none;
+}
