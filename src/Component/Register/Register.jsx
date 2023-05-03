@@ -28,6 +28,12 @@ const Register = () => {
         const password=e.target.password.value;
        
 
+        if(password.length < 6){
+          
+            toast.error('Password Must Be More Than 6')
+
+            return;
+        }
 
         registerWithEmailPassword(email,password)
         .then(response=>{
@@ -43,7 +49,7 @@ const Register = () => {
 
             toast.error(error.message)
 
-            console.log(error)
+           
         })
         
 
@@ -53,7 +59,7 @@ const Register = () => {
     const updateUserProfile=(currentUser,displayName,photoURL)=>{
 
         updateProfile(currentUser, {displayName,photoURL})
-        .then(response=> toast.success('Profile updated!'))
+        .then(()=> toast.success('Profile updated!'))
         .catch(error => toast.error(error.message))
     }
 
