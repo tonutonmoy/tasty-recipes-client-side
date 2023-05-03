@@ -4,6 +4,7 @@ import Login from "../Component/Login/Login";
 import Register from "../Component/Register/Register";
 import HomeLayOut from "../Component/HomeLayOut/HomeLayOut";
 import ViewRecipes from "../Component/ViewRecipes/ViewRecipes";
+import Blog from "../Component/Blog/Blog";
 
 export  const router = createBrowserRouter([
     {
@@ -30,6 +31,11 @@ export  const router = createBrowserRouter([
           path:'/recipesData/:id',
           element:<ViewRecipes></ViewRecipes>,
           loader:({params})=> fetch(`http://localhost:5000/recipesData/${params.id}`)   
+        },
+
+        {
+          path:'/blog',
+          element:<Blog></Blog>
         }
       ]
     },

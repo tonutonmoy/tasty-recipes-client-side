@@ -8,7 +8,7 @@ const ViewRecipes = () => {
 
     const singleData= useLoaderData();
 
-    console.log(singleData)
+    
     return (
         <div>
             

@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './Register.css'
 import { Button, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { BsGoogle,BsGithub } from 'react-icons/bs';
+import { AuthProvider } from '../../Provider/Provider';
+
 
 
 const Register = () => {
+
+
+    const {singInGoogle,singInGitHub}=useContext(AuthProvider);
+
+ 
 
     const registerFormHandler=(e)=>{
 
@@ -21,6 +28,8 @@ const Register = () => {
         
 
     }
+
+    
 
     return (
         <div style={{marginTop:"100px",marginBottom:"200px"}}>
@@ -71,12 +80,17 @@ const Register = () => {
               </section>
              
              <section className='github-google-container mb-5 '>
-              <button className='google-button'>
+
+              <button onClick={singInGoogle} className='google-button'>
+
               <BsGoogle></BsGoogle> <span>Google</span>
+
               </button>
                 
-                <button className='github-button'>
+                <button onClick={singInGitHub} className='github-button'>
+
                     <BsGithub></BsGithub> <span>Github</span>
+
                 </button>
               </section>
         </div>
