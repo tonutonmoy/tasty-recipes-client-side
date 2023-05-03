@@ -32,7 +32,7 @@ const HomeSlider = () => {
 
           <div className='home-slider-text-container'>
 
-           
+         
 
           <p className='home-slider-text text-center '>A Fine Authentic Cuisine</p>
 
