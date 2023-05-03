@@ -6,6 +6,7 @@ import HomeLayOut from "../Component/HomeLayOut/HomeLayOut";
 import ViewRecipes from "../Component/ViewRecipes/ViewRecipes";
 import Blog from "../Component/Blog/Blog";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import NotFound from "../Component/NotFound/NotFound";
 
 export  const router = createBrowserRouter([
     {
@@ -46,6 +47,11 @@ export  const router = createBrowserRouter([
           path:'/blog',
           
           element:<Blog></Blog>
+        },
+
+        {
+          path:'/*',
+          element:<NotFound></NotFound>
         }
       ]
     },
