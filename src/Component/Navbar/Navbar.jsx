@@ -45,41 +45,38 @@ const Navbar = () => {
 
         </div>
         
-        <div>
-           <ActiveLink to='/register'  >Register</ActiveLink  >
+       
+          {
+            user ? <div>
 
-        </div>
+               <img className='navbar-user-photo' src={user?.photoURL} alt="" title={user?.displayName} />
+      
+                </div>
+
+             :  <div>
+                <ActiveLink to='/register'  >Register</ActiveLink  >
+
+                </div>
+     
+    
+          
+             }
 
 
-          {   user ?
-
-
-             <div className='d-md-flex gap-5 '>
- 
-                 <div>
-                    <img className='navbar-user-photo' src={user?.photoURL} alt="" title={user?.displayName} />
-           
-                 </div>
-
-                 <div className='my-md-0 my-3'>
+                {   user ? <div className='my-md-0 my-3'>
            
                       <button onClick={logOutHandler} className='navbar-logOut-button'>Logout</button>
-
-           
-                  </div>   
             
-               </div>
+                       </div>
 
        
 
-              :  <div>
-                  <ActiveLink to='/login'  >Login</ActiveLink  >
-      
-                  </div>
-
-
-
-   }
+                   :  <div>
+                        <ActiveLink to='/login'  >Login</ActiveLink  >
+  
+                      </div>
+                   
+                  }
 
          </div>
        

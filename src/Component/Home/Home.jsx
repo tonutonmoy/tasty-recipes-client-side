@@ -19,7 +19,11 @@ const Home = () => {
     return (
         <div className=' home-container'>
            
-         <HomeSlider></HomeSlider>
+         
+
+            <HomeSlider></HomeSlider>
+           
+        
 
 
         <section className='container mx-auto'>
