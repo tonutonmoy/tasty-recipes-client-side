@@ -30,7 +30,7 @@ const HomeSlider = () => {
 
         <img className='home-slider-img' src={img1} alt="" />
 
-          <div style={{position:"absolute",bottom:"10%",left:"15%"}}>
+          <div className='home-slider-text-container'>
 
            
 
@@ -48,7 +48,7 @@ const HomeSlider = () => {
 
       <SwiperSlide>
         <img className='home-slider-img' src={img2} alt="" />
-        <div style={{position:"absolute",bottom:"10%",left:"20%"}}>
+        <div   className='home-slider-text-container'>
 
            
 
@@ -62,7 +62,7 @@ const HomeSlider = () => {
       <SwiperSlide>
         <img className='home-slider-img' src={img3} alt="" />
 
-        <div style={{position:"absolute",bottom:"10%",left:"20%"}}>
+        <div   className='home-slider-text-container'>
 
            
 

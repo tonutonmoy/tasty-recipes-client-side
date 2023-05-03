@@ -4,7 +4,7 @@ import {BsFacebook,BsYoutube,BsInstagram} from 'react-icons/bs';
 
 const Footer = () => {
     return (
-        <footer className='footer row row-cols-md-4 row-cols-2'>
+        <footer className='footer row row-cols-md-4 row-cols-1'>
             <div className=' mt-md-0 mt-5'>
                 <h2 className='website-title'>Tasty-Recipes</h2>
 

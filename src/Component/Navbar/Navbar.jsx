@@ -33,27 +33,32 @@ const Navbar = () => {
    }
     return (
        <nav className='navbar-container row row-cols-md-2 '>
-        <div><span className='website-title'>Tasty-Recipes</span></div>
+
+        <div className='text-center text-md-start'>
+
+         <span className='website-title '>Tasty-Recipes</span>
+
+         </div>
       
-         <div  className='d-md-flex justify-content-between align-items-center'>
-         <div>
+         <div  className='d-md-flex justify-content-between align-items-center text-center text-md-start'>
+         <div className='my-md-0 my-5'>
            <ActiveLink to='/' >Home</ActiveLink>
 
         </div>
-        <div>
+        <div className='my-md-0 my-5'>
            <ActiveLink to='/blog'  >Blog</ActiveLink  >
 
         </div>
         
        
           {
-            user ? <div>
+            user ? <div className='my-md-0 my-5'>
 
                <img className='navbar-user-photo' src={user?.photoURL} alt="" title={user?.displayName} />
       
                 </div>
 
-             :  <div>
+             :  <div className='my-md-0 my-5'>
                 <ActiveLink to='/register'  >Register</ActiveLink  >
 
                 </div>
@@ -71,7 +76,7 @@ const Navbar = () => {
 
        
 
-                   :  <div>
+                   :  <div className='my-md-0 my-5'>
                         <ActiveLink to='/login'  >Login</ActiveLink  >
   
                       </div>
