@@ -4,13 +4,16 @@ import { Button, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { BsGoogle,BsGithub } from 'react-icons/bs';
 import { AuthProvider } from '../../Provider/Provider';
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
+import { updateProfile } from 'firebase/auth';
 
 
 
 const Register = () => {
 
 
-    const {singInGoogle,singInGitHub}=useContext(AuthProvider);
+    const {singInGoogle,singInGitHub,registerWithEmailPassword}=useContext(AuthProvider);
 
  
 
@@ -25,8 +28,33 @@ const Register = () => {
         const password=e.target.password.value;
        
 
+
+        registerWithEmailPassword(email,password)
+        .then(response=>{
+            toast.success('register done')
+
+            const currentUser=response.user;
+
+            updateUserProfile(currentUser,name,photoUrl)
+
+             e.target.reset();
+        })
+        .catch(error=> {
+
+            toast.error(error.message)
+
+            console.log(error)
+        })
         
 
+    }
+
+
+    const updateUserProfile=(currentUser,displayName,photoURL)=>{
+
+        updateProfile(currentUser, {displayName,photoURL})
+        .then(response=> toast.success('Profile updated!'))
+        .catch(error => toast.error(error.message))
     }
 
     
@@ -68,7 +96,7 @@ const Register = () => {
              Already have an account? <Link to='/login' style={{textDecoration:"none",color:"#F9A51A"}}> Login </Link> 
              </p>
              
-             
+             <ToastContainer/>
              
              </Form> 
 

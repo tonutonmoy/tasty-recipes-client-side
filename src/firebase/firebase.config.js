@@ -24,9 +24,3 @@ export default app;
 
 
 
-// apiKey: "AIzaSyByav8KzhMUVd4TfNhDR_wIcvtJW0KfG6s",
-// authDomain: "tasty-recipes-3afce.firebaseapp.com",
-// projectId: "tasty-recipes-3afce",
-// storageBucket: "tasty-recipes-3afce.appspot.com",
-// messagingSenderId: "663926573799",
-// appId: "1:663926573799:web:93684841991255722bb042"
