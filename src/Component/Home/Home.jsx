@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 
 
 
 import './Home.css'
 import HomeSlider from '../HomeSlider/HomeSlider';
-import HomeCard from '../HomeCard/HomeCard';
+// import HomeCard from '../HomeCard/HomeCard';
 import { useLoaderData } from 'react-router-dom';
 import FoodSafety from '../FoodSafety/FoodSafety';
 import Review from '../Review/Review';
+import Loader from '../Loader/Loader';
 
+
+const HomeCard =lazy(()=> delay( import('../HomeCard/HomeCard')))
 
 
 const Home = () => {
@@ -19,27 +22,39 @@ const Home = () => {
     return (
         <div className=' home-container'>
            
-         
+           
 
-            <HomeSlider></HomeSlider>
+           <HomeSlider></HomeSlider>
+           
+
+           
            
         
-
+         
 
         <section className='container mx-auto'>
             <h2 className='home-title'>Top Indian Chef</h2>
 
             <div className='row row-cols-md-3  '>
+
+            
              
             {
-               chefData && chefData.map(d=>  <HomeCard data={d} key={d.id} ></HomeCard>)
-            }
+               chefData && chefData.map(d=> <Suspense fallback={<Loader></Loader>}> 
 
+                  <HomeCard data={d} key={d.id}></HomeCard> 
+                    
+                </Suspense>   )
+            }
+            
+           
 
             </div>
            
 
         </section>
+
+        
 
 
         <section className='container mx-auto'>
@@ -62,5 +77,14 @@ const Home = () => {
         </div>
     );
 };
+
+
+
+function delay(promise) {
+    return new Promise(resolve => {
+      setTimeout(resolve, 3000);
+    }).then(() => promise);
+  }
+
 
 export default Home;

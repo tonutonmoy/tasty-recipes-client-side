@@ -1,0 +1,67 @@
+.home-card-container{
+
+    border: 0;
+  
+     box-shadow: 20px 20px 20px black;
+  
+     background: #780206;  /* fallback for old browsers */
+     background: -webkit-linear-gradient(to right, #061161, #780206);  /* Chrome 10-25, Safari 5.1-6 */
+     background: linear-gradient(to right, #3f4155, #381d1e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+     
+     border-radius: 20px;
+     
+     
+  }
+
+  .home-card-img{
+    height: 300px;
+    padding: 20px 20px;
+    
+   border-radius: 100%;
+    
+   border-left: 3px solid white;
+    
+
+
+}
+
+.home-card-title{
+    
+    font-size: 23px;
+    font-weight: 500;
+    color: whitesmoke;
+}
+
+
+.home-card-text{
+    font-size: 20px;
+    
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+}
+
+.home-card-button{
+    width: 100%;
+   
+    color: rgb(255, 232, 232);
+    font-size: 20px;
+    font-weight: 500;
+    border: 1px solid rgb(255, 238, 238);
+     
+    background-color: #78020659;
+    
+    
+}
+
+.home-card-button:hover{
+    background-color: #780206;
+    border: none;
+}
+
+
+.home-card-container:hover{
+    border-radius: 0%;
+    box-shadow: 30px 30px 30px black;
+    transition: 3s;
+}
