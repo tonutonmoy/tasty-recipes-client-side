@@ -16,7 +16,7 @@ export  const router = createBrowserRouter([
         {
           path:'/',
           element: <Home></Home>,
-          loader:()=> fetch('http://localhost:5000/chefData')
+          loader:()=> fetch('https://tasty-recipes-server-side-tonutonmoy.vercel.app/chefData')
         },
 
         {
@@ -40,7 +40,7 @@ export  const router = createBrowserRouter([
 
                    </PrivateRoute>,
 
-          loader:({params})=> fetch(`http://localhost:5000/recipesData/${params.id}`)   
+          loader:({params})=> fetch(`https://tasty-recipes-server-side-tonutonmoy.vercel.app/recipesData/${params.id}`)   
         },
 
         {

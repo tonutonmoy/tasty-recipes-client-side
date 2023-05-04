@@ -41,6 +41,8 @@ const Register = () => {
 
             const currentUser=response.user;
 
+            
+
             updateUserProfile(currentUser,name,photoUrl)
 
              e.target.reset();

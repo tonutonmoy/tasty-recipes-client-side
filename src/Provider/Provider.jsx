@@ -21,7 +21,7 @@ const Provider = ({children}) => {
 
     const singInGoogle=()=>{
 
-        
+        setLoader(true)
 
         signInWithPopup(auth,googleProvider)
     };
@@ -30,14 +30,14 @@ const Provider = ({children}) => {
 
     const singInGitHub=()=>{
 
-        
+        setLoader(true)
 
         signInWithPopup(auth,gitHubProvider)
     };
 
 
     const registerWithEmailPassword=(email,password)=>{
-
+        setLoader(true)
 
        return createUserWithEmailAndPassword(auth,email,password)
     };
@@ -46,11 +46,15 @@ const Provider = ({children}) => {
 
     const loginWithEmailPassword=(email,password)=>{
 
+        setLoader(true)
+
         return signInWithEmailAndPassword(auth,email,password)
     }
 
 
     const logOut=()=>{
+
+        setLoader(true)
 
        return signOut(auth)
     }
@@ -59,28 +63,28 @@ const Provider = ({children}) => {
 
     useEffect(()=>{
 
-         const subscribe=()=>{
+        
 
             onAuthStateChanged(auth, (currentUser)=>{
 
               
                 
-                setLoader(false); 
+               
 
                 setUser(currentUser);
 
                
+                setLoader(false); 
 
+                console.log(currentUser)
+
+                console.log('onAuthStateChanged done')
                 
             })
           
-         };
+       
          
-         return ()=> {
-
-            subscribe()
-         }
-
+       
     },[]);
 
     const authInfo={
@@ -96,6 +100,7 @@ const Provider = ({children}) => {
         logOut,
 
         user,
+       
 
         loader
     };

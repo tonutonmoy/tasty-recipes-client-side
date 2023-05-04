@@ -33,7 +33,7 @@ const Login = () => {
         const password=e.target.password.value;
         const confirmPassword=e.target.confirmPassword.value;
 
-        console.log(email,password,confirmPassword)
+       
 
 
         if(password !== confirmPassword){
@@ -55,7 +55,7 @@ const Login = () => {
         .catch(error=> {
 
             toast.error(error.message)
-            console.log(error)
+           
         })
 
     };

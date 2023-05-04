@@ -19,6 +19,7 @@ const Home = () => {
     const chefData=useLoaderData();
 
     
+    
     return (
         <div className=' home-container'>
            
@@ -40,9 +41,9 @@ const Home = () => {
             
              
             {
-               chefData && chefData.map(d=> <Suspense fallback={<Loader></Loader>}> 
+               chefData && chefData.map(d=> <Suspense key={d.id}  fallback={<Loader ></Loader>}> 
 
-                  <HomeCard data={d} key={d.id}></HomeCard> 
+                  <HomeCard data={d} ></HomeCard> 
                     
                 </Suspense>   )
             }
