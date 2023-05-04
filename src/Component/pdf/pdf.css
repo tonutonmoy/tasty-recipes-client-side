@@ -1,0 +1,35 @@
+
+
+
+.pdf-container{
+    background-color: rgba(10, 17, 39, 0.575);
+  margin-top: 100px;
+  padding: 100px;
+  border-radius: 30px;
+   
+  box-shadow: 10px 10px 10px black;
+  color: white;
+}
+
+.pdf-text-container{
+
+   padding: 30px;
+
+}
+
+
+.pdf-container:hover{
+
+    background-color: rgb(0, 0, 0);
+    border-top-right-radius: 50% ;
+    border-bottom-left-radius: 50% ;
+    border-top-left-radius: 0% ;
+    border-bottom-right-radius: 0% ;
+    border: 10px solid white;
+
+    color: white;
+
+    box-shadow: 30px 30px 30px black;
+
+    transition: 3s;
+}
